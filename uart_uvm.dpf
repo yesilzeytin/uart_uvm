@@ -1,0 +1,24 @@
+---
+# Note: The contents of this file are automatically generated.
+# Any changes made by hand may be overwritten.
+version: '0.2'
+work_dir: ./work
+design_root_dir: ./src
+simulations:
+  - name: baseline_tb
+    options: >-
+      -top sim_lib.uart_tx_test -L rtl_lib -L sim_lib -sv2012 +acc+b -waves
+      waves.mxd
+source_files:
+  - language: verilog
+    path: ./rtl_flist.f
+    library_name: rtl_lib
+    options: '-timescale 1ns/1ps -sv2012 +acc+b -uvm 1.2'
+    file_list: relative-to-file
+  - language: verilog
+    path: ./sim_flist.f
+    library_name: sim_lib
+    options: '-timescale 1ns/1ps -sv2012 +acc+b +incdir+dir[+./../src]'
+    file_list: relative-to-file
+library_search_paths:
+  - $STD_LIBS\ieee93
