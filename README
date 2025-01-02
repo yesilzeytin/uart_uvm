@@ -1,3 +1,19 @@
+# UART UVM
+UVM verification environment for jamieiles's UART on GitHub.
+
+## Checklist
+- [x] Set Up DVT for lint
+- [x] Set Up DSim for sim
+- [x] Reorganize the hierarchy
+- [ ] Baseline environment
+- [ ] Configuration classes
+- [ ] Sequences
+- [ ] Scoreboard
+- [ ] Coverage
+- [ ] Assertions
+- [ ] Callbacks
+
+## Original README
 Simple verilog UART.
 
 A simple UART for use in an FPGA as a debug engine.  Requires a 50MHz input
